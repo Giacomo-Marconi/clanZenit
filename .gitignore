@@ -5,4 +5,4 @@
 *.pyc
 *.pyo
 
-pycache/
+__pycache__/
