@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Clan Test</title>
+    <link rel="icon" href="./img/valpo1.png" type="image/png">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="icon" href="img/logo.png"> -->
+    <script src="./js/peopleMenager.js"></script>
+</head>
+<body class="body" onload="">
+
+<div id="del1" class="blur"></div>
+<div id="del2" class="div-load">
+    <div id="progressbar" class="progress">
+    </div>
+</div>
+
+
+    <nav>
+        <a class="flex" href="index.html"><img class="icon" src="./img/home.svg" alt="home"></a>
+        <p class="title">People page</p>
+        <a class="flex" href="role.html"><img class="icon" src="./img/role.svg" alt="role"></a>
+    </nav>
+
+    <!--<p class="title">Admin page</p>-->
+
+
+    <!-- input form -->
+    <form class="input-container" action="/php/persone/createPerson.php" method="post">
+        <input class="input-item"  type="text" placeholder="nome" name="name" required>
+        <input class="input-item"  type="text" placeholder="cogmome" name="surname" required>
+        <input class="input-item"  type="text" placeholder="username" name="user" required>
+        <input class="input-item" type="submit" value="conferma">
+    </form>
+
+    <!-- show people -->
+    <div id="people" class="persone-container">
+
+        <!--<form id="form0" class="persona admin" action="/php/persone/removePerson.php" method="POST"><input id="hidden0" type="hidden" name="id" value="0">
+            <input class="checkb" type="checkbox" id="admin0">
+            <p class="nome">giacomo</p>
+            <input class="input-item interno" type="submit" value="remove">
+        </form>-->
+
+    </div>
+
+    <!-- <footer>
+        <p>Produced by Figliolo | Braga</p>
+    </footer> -->
+
+<script>
+    let progressBar = document.getElementById('progressbar');
+    progressBar.addEventListener('animationend', function() {
+
+        let pr1 = document.getElementById('del1');
+        pr1.parentNode.removeChild(pr1);
+
+        pr1 = document.getElementById('del2');
+        pr1.parentNode.removeChild(pr1);
+        init();
+    });
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+

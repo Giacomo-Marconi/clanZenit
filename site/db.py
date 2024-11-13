@@ -4,6 +4,7 @@ import os
 class DatabaseManager:
     def __init__(self, host="figliolo.it", user="", password="", database="clanZenit2"):
         user = os.getenv("dbUser")
+        print(user)
         password = os.getenv("dbPassword")
         self.connection = mysql.connector.connect(
             host=host,
@@ -14,7 +15,7 @@ class DatabaseManager:
         self.cursor = self.connection.cursor(dictionary=True)
 
     def getPersone(self):
-        self.cursor.execute("SELECT * FROM user")
+        self.cursor.execute("SELECT id, name FROM user")
         return self.cursor.fetchall()
     
     def getRuoli(self):
@@ -22,7 +23,7 @@ class DatabaseManager:
         return self.cursor.fetchall()
     
     def getRuoliPersone(self):
-        self.cursor.execute("SELECT u.id, u.name, r.name FROM user u, role r where u.role = r.id")
+        self.cursor.execute("SELECT u.id, u.name, r.role_name FROM user u, role r where u.role = r.id")
         return self.cursor.fetchall()
     
     def addPerson(self, name, role_id):
@@ -44,15 +45,27 @@ class DatabaseManager:
         return False
     
     def addRole(self, name):
-        self.cursor.execute("INSERT INTO role (name) VALUES (%s) where ok", (name,))
-        self.connection.commit()
+        try:
+            self.cursor.execute("INSERT INTO role (role_name) VALUES (%s)", (name,))
+            self.connection.commit()
+        except mysql.connector.errors.IntegrityError as e:
+            print(e)
+            print("Errore: ruolo già esistente")
+        return False
     
     
 def main():
-    person = ["Figliolo"]
     db = DatabaseManager()
+    
+    """
+    person = ["Figliolo", "Giacomo", "test"]
     for p in person:
         db.addPerson(p)
+    """
+        
+    role = ["io", "tu"]
+    for r in role:
+        db.addRole(r)
     print(db.getRuoliPersone())
 
 

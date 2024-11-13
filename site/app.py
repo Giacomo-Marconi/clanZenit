@@ -1,10 +1,12 @@
 from flask import Flask, render_template, jsonify, request, abort
-import os
+from flask_cors import CORS
 import db
+
 
 
 db = db.DatabaseManager()
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/getData', methods=['GET'])
 def home():    
@@ -33,10 +35,11 @@ def addPerson():
 @app.route('/addRole', methods=['POST'])
 def addRole():
     try:
-        name = request.json['name']
+        name = request.json['ruolo']
         db.addRole(name)
         return jsonify({'status': 'ok'}), 200
     except KeyError:
+        print("Errore")
         abort(400)
         
 
