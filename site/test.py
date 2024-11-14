@@ -4,37 +4,38 @@ def getCoppie(n, time, role):
     for x in range(n):
         a=[]
         for y in range(n):
-            a.append(False)
+            a.append(-1)
         check.append(a)
     
     i=0
-    check[i][i] = True
+    check[i][i] = i
     c=0
     r=0
     while(r<n):
         print("------------------------------")
         for x in range(n):
             print(check[x])
-        if(check[r][r]):
+        if(check[r][r]!=-1):
             r+=1
             c=r
             print("skippato --> ", r-1)
             continue
-                
+        
+        
         print("cerco in: ", r)
-        while(check[r][c] or c==r):
-            find = False
-                
-            print(c, end=" ")
+        while(check[r][c]!=-1 or c==r or checks(i, check[c])):
+            print("skippo: ", r, c)
             c+=1
                 
-        check[r][c] = True
-        check[c][r] = True
+        check[r][c] = i
+        check[c][r] = i
         print(f"\n find: {r} --> {c}")
         r+=1
-        c=r
+        c=0
         
-            
+     
+def checks(n, where):
+    return (n in where)
     
 
 
@@ -58,13 +59,12 @@ def coppie(pers, diff, time):
     #tostaaaisssima pazzo cane cane pazzo
     
     print("]", end=" no used: ")
-    
     for i in range(len(used)):
         if(used[i] == 0):
             print(array[i], "", end=" ")
             
     print()
-        
+   
 
 p = 12
 r = 5
@@ -72,7 +72,9 @@ r = 5
 person = []
 for i in range(p):
     person.append(i+1)
+
 #print(person)
+
 
 role = []
 for i in range(r):
@@ -122,6 +124,5 @@ while True:
     time += 1
     if(time == p):
         break
-
-    getCoppie(p, time, r)
     
+    getCoppie(p, time, r)
