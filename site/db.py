@@ -23,7 +23,7 @@ class DatabaseManager:
         return self.cursor.fetchall()
     
     def getRuoliPersone(self):
-        self.cursor.execute("SELECT u.id, u.name, r.role_name FROM user u, role r where u.role = r.id")
+        self.cursor.execute("SELECT u.id, u.name, r.role_name FROM user u, role r where u.role = r.id union select u.id, u.name, 'Fortunello' FROM user u where role is null")
         return self.cursor.fetchall()
     
     def addPerson(self, name, role_id):
