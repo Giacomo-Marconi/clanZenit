@@ -10,13 +10,14 @@
     <!-- <link rel="icon" href="img/logo.png"> -->
     <script src="./js/peopleMenager.js"></script>
 </head>
-<body class="body" onload="">
-
+<body class="body" onload="init();">
+<!-- 
 <div id="del1" class="blur"></div>
 <div id="del2" class="div-load">
     <div id="progressbar" class="progress">
     </div>
 </div>
+-->
 
 
     <nav>
@@ -29,12 +30,10 @@
 
 
     <!-- input form -->
-    <form class="input-container" action="/php/persone/createPerson.php" method="post">
-        <input class="input-item"  type="text" placeholder="nome" name="name" required>
-        <input class="input-item"  type="text" placeholder="cogmome" name="surname" required>
-        <input class="input-item"  type="text" placeholder="username" name="user" required>
+    <div class="input-container">
+        <input class="input-item"  type="text" placeholder="name:" name="name" required>
         <input class="input-item" type="submit" value="conferma">
-    </form>
+    </div>
 
     <!-- show people -->
     <div id="people" class="persone-container">
@@ -51,7 +50,7 @@
         <p>Produced by Figliolo | Braga</p>
     </footer> -->
 
-<script>
+<!--<script>
     let progressBar = document.getElementById('progressbar');
     progressBar.addEventListener('animationend', function() {
 
@@ -62,7 +61,7 @@
         pr1.parentNode.removeChild(pr1);
         init();
     });
-</script>
+</script>-->
 
 
 </body>

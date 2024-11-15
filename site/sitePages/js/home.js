@@ -39,54 +39,12 @@ function createCombination(combin) {
 
     let user = document.createElement('div');
     user.className = 'persona user-name';
-    /*user.onclick = function() {
-        test(combin.tird)
-    }*/
     if(combin.first == 'Drago'){
         console.log('Drago');
         user.onclick = function() {
             drago()
         }
     }
-
-
-
-function insLoadBar() {
-    let body = document.getElementById('body');
-    let blur = document.createElement('div');
-    blur.id = 'del1';
-    blur.className = 'blur';
-
-    let load = document.createElement('div');
-    load.id = 'del2';
-    load.className = 'div-load';
-
-    let prbar = document.createElement('div');
-    prbar.id = 'progressbar';
-    prbar.className = 'progress';
-
-    load.appendChild(prbar);
-
-    body.appendChild(blur);
-    body.appendChild(load);
-
-    let progressBar = document.getElementById('progressbar');
-    progressBar.addEventListener('animationend', delLoadBar);
-
-}
-
-function delLoadBar() {
-    init();
-
-    let pr1 = document.getElementById('del1');
-    let pr2 = document.getElementById('del2');
-
-    if(pr1 == null || pr2== null) return;
-
-    pr1.parentNode.removeChild(pr1);
-    pr2.parentNode.removeChild(pr2);
-}
-
     let p = document.createElement('p');
     p.innerHTML = combin.first;
     p.className = 'nome';
@@ -108,37 +66,9 @@ function delLoadBar() {
     return container;
 }
 
-
-
-function test(n) {
-    fetch('/php/cookies.php?id=' + n)
-}
-
 function drago() {
     window.location.href = '/img/qwerty.jpeg';
     //console.log('dr');
-}
-
-
-
-function checkDate() {
-    fetch('php/date/updateRuoli.php')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('error updateRuoli.php');
-        }
-        return response.json();
-    })
-    .then(json => {       
-        /*if(json.diff < 7) {
-            delLoadBar();
-        }else{
-            //must recalocalre role
-            ///updateDate(); ogni volta che ricalcolo i ruoli
-            insLoadBar();
-        }*/
-    })
-    .catch(error => {console.error('error function: checkDate:', error)});
 }
 
 

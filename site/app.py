@@ -29,8 +29,7 @@ def getPerson():
 def addPerson():
     try:
         name = request.json['name']
-        role = request.json['role']
-        db.addPerson(name, role)
+        db.addPerson(name, None)
         log.info("addPerson from: " + request.remote_addr)
         return jsonify({'status': 'o'}), 200
     except KeyError:
