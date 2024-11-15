@@ -15,11 +15,11 @@ class DatabaseManager:
         self.cursor = self.connection.cursor(dictionary=True)
 
     def getPersone(self):
-        self.cursor.execute("SELECT id, name FROM user")
+        self.cursor.execute("SELECT id, name FROM user ORDER BY role desc")
         return self.cursor.fetchall()
     
     def getRuoli(self):
-        self.cursor.execute("SELECT * FROM role")
+        self.cursor.execute("SELECT * FROM role ORDER BY id desc")
         return self.cursor.fetchall()
     
     def getRuoliPersone(self):
@@ -53,6 +53,15 @@ class DatabaseManager:
             print("Errore: ruolo già esistente")
         return False
     
+    def updateRole(self, personId, roleId):
+        try:
+            self.cursor.execute("UPDATE user SET role = %s WHERE id = %s", (roleId, personId))
+            self.connection.commit()
+        except mysql.connector.errors.IntegrityError as e:
+            print(e)
+            print("Errore: ruolo non esistente")
+        return False
+
     
 def main():
     db = DatabaseManager()

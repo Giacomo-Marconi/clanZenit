@@ -34,7 +34,7 @@ db = db.DatabaseManager()
 roles = db.getRuoli()
 people = db.getPersone()
 
-pairToRole = [-1] * len(people)
+pairToRole = [-1] * len(people)//2 if len(people)%2==0 else [-1] * (len(people)//2+1)
 
 for i in range(0, len(roles)):
     pairToRole[-i-1]=roles[i]['id']
@@ -45,22 +45,44 @@ mat = []
 p = len(people)
 if(p%2!=0):
     p+=1
+'''
+start = 0
+if len(people)%2!=0:
+    start = 1
 
-t = []
-for i in range(1, p//2+1):
-      t.append(i)
+t=[-1]*(p//2)
+for i in range(start, p//2):
+    t[i] = people[i-start]['id']
 mat.append(t)
 
-t = []
-for i in range(1, p//2+1):
-      t.append(i+p//2)
+t=[]
+for i in range(p//2, p):
+    t.append(people[i-start]['id'])
 mat.append(t)
+pr(mat)
+'''
 
+mat=[[-1]*(p//2), [-1]*(p//2)]
+for i in range(len(people)):
+    if(i%2==0):
+        mat[1][-(i//2)-1]=people[i]['id']
+    else:
+        mat[0][-(i//2)-1]=people[i]['id']
+print("now")
+pr(mat)
+
+
+ruota(mat)
 ruota(mat)
 pr(mat)
 pair = getCoppie(mat)
 
-    
+
 print(pair)
 print(pairToRole)
 
+for i in range(1, len(pair)):
+    db.updateRole(pair[i][0], pairToRole[i] if pairToRole[i]!=-1 else None)
+    print("update %s --> " % (pair[i][0]) , pairToRole[i] if pairToRole[i]!=-1 else None)
+    db.updateRole(pair[i][1], pairToRole[i] if pairToRole[i]!=-1 else None)
+    print("update %s --> " % (pair[i][1]), pairToRole[i] if pairToRole[i]!=-1 else None)
