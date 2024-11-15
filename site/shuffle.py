@@ -39,7 +39,7 @@ pairToRole = [-1] * len(people)//2 if len(people)%2==0 else [-1] * (len(people)/
 for i in range(0, len(roles)):
     pairToRole[-i-1]=roles[i]['id']
 
-print(pairToRole)
+#print(pairToRole)
 
 mat = []
 p = len(people)
@@ -68,7 +68,7 @@ for i in range(len(people)):
         mat[1][-(i//2)-1]=people[i]['id']
     else:
         mat[0][-(i//2)-1]=people[i]['id']
-print("now")
+#print("now")
 pr(mat)
 
 
@@ -78,11 +78,11 @@ pr(mat)
 pair = getCoppie(mat)
 
 
-print(pair)
-print(pairToRole)
+#print(pair)
+#print(pairToRole)
 
 for i in range(1, len(pair)):
     db.updateRole(pair[i][0], pairToRole[i] if pairToRole[i]!=-1 else None)
-    print("update %s --> " % (pair[i][0]) , pairToRole[i] if pairToRole[i]!=-1 else None)
+    #print("update %s --> " % (pair[i][0]) , pairToRole[i] if pairToRole[i]!=-1 else None)
     db.updateRole(pair[i][1], pairToRole[i] if pairToRole[i]!=-1 else None)
-    print("update %s --> " % (pair[i][1]), pairToRole[i] if pairToRole[i]!=-1 else None)
+    #print("update %s --> " % (pair[i][1]), pairToRole[i] if pairToRole[i]!=-1 else None)
