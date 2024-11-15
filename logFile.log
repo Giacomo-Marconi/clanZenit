@@ -430,3 +430,5 @@
 2024-11-15 18:32:02,638 - app - INFO - getData from: 127.0.0.1
 2024-11-15 18:32:02,779 - app - INFO - getData from: 127.0.0.1
 2024-11-15 18:32:02,906 - app - INFO - getData from: 127.0.0.1
+2024-11-15 18:47:51,866 - app - INFO - getData from: 127.0.0.1
+2024-11-15 18:47:55,089 - app - INFO - getPerson from: 127.0.0.1
