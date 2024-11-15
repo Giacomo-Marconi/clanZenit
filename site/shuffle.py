@@ -1,4 +1,5 @@
 import db
+import logger
 
 def pr(mat):
     print("-"*6*len(mat[0]))
@@ -28,7 +29,7 @@ def ruota(mat):
         
     mat[1][-1]=last
     mat[0][1]=first
-
+log = logger.Log('shuffle', 'logFile.log').get_logger()
 
 db = db.DatabaseManager()
 roles = db.getRuoli()
@@ -73,7 +74,9 @@ pr(mat)
 
 
 ruota(mat)
+log.info("first rotation")
 ruota(mat)
+log.info("second rotation")
 pr(mat)
 pair = getCoppie(mat)
 
@@ -83,6 +86,8 @@ pair = getCoppie(mat)
 
 for i in range(1, len(pair)):
     db.updateRole(pair[i][0], pairToRole[i] if pairToRole[i]!=-1 else None)
+    log.info("update %s --> " % (pair[i][0]) + str(pairToRole[i] if pairToRole[i]!=-1 else None))
     #print("update %s --> " % (pair[i][0]) , pairToRole[i] if pairToRole[i]!=-1 else None)
     db.updateRole(pair[i][1], pairToRole[i] if pairToRole[i]!=-1 else None)
+    log.info("update %s --> " % (pair[i][0]) + str(pairToRole[i] if pairToRole[i]!=-1 else None))
     #print("update %s --> " % (pair[i][1]), pairToRole[i] if pairToRole[i]!=-1 else None)
