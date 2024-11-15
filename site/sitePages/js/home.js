@@ -93,7 +93,6 @@ function delLoadBar() {
 
     user.appendChild(p);
 
-
     let role = document.createElement('div');
     role.className = 'persona user-role';
 
