@@ -13,7 +13,7 @@ Per utilizzare questo progetto in Python, segui questi passaggi:
 
 1. Clona il repository:
     ```bash
-    git clone https://github.com/tuo-utente/clanZenit.git
+    git clone https://github.com/Giacomo-Marconi/clanZenit.git
     ```
 2. Naviga nella directory del progetto:
     ```bash
