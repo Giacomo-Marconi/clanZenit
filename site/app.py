@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request, abort
 from flask_cors import CORS
-import db
+import db as dbm
 import logger
 
 log = logger.Log('app', 'logFile.log').get_logger()
@@ -9,7 +9,7 @@ CORS(app)
 
 @app.route('/getData', methods=['GET'])
 def home():    
-    db = db.DatabaseManager()
+    db = dbm.DatabaseManager()
     log.info("getData from: " + request.remote_addr)
     risp = db.getRuoliPersone()
     db.close()
@@ -18,7 +18,7 @@ def home():
 
 @app.route('/getRole', methods=['GET'])
 def getRole():
-    db = db.DatabaseManager()
+    db = dbm.DatabaseManager()
     log.info("getRole from: " + request.remote_addr)
     risp = db.getRuoli()
     db.close()
@@ -27,7 +27,7 @@ def getRole():
 
 @app.route('/getPerson', methods=['GET'])
 def getPerson():
-    db = db.DatabaseManager()
+    db = dbm.DatabaseManager()
     log.info("getPerson from: " + request.remote_addr)
     risp = db.getPersone()
     db.close()
@@ -36,7 +36,7 @@ def getPerson():
 @app.route('/addPerson', methods=['POST'])
 def addPerson():
     try:
-        db = db.DatabaseManager()
+        db = dbm.DatabaseManager()
         name = request.json['name']
         db.addPerson(name, None)
         db.close()
@@ -49,7 +49,7 @@ def addPerson():
 @app.route('/addRole', methods=['POST'])
 def addRole():
     try:
-        db = db.DatabaseManager()
+        db = dbm.DatabaseManager()
         name = request.json['ruolo']
         db.addRole(name)
         db.close()

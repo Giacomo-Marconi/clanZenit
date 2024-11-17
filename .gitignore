@@ -6,3 +6,5 @@
 *.pyo
 
 __pycache__/
+
+logFile.log
