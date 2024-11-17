@@ -73,7 +73,7 @@ function createPerson(name, idd) {
 
     let bremove = createBremove(idd);
 
-    persona.appendChild(hinput);
+    //persona.appendChild(hinput);
     persona.appendChild(p);
     persona.appendChild(bremove);
 
