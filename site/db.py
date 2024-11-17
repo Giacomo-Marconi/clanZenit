@@ -13,6 +13,10 @@ class DatabaseManager:
             database=database
         )
         self.cursor = self.connection.cursor(dictionary=True)
+    
+    def close(self):
+        self.cursor.close()
+        self.connection.close()
 
     def getPersone(self):
         self.cursor.execute("SELECT id, name FROM user ORDER BY role desc")
