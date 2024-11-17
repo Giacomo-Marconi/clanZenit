@@ -66,6 +66,14 @@ class DatabaseManager:
             print("Errore: ruolo non esistente")
         return False
 
+    def removePerson(self, personId):
+        try:
+            self.cursor.execute("DELETE FROM user WHERE id = %s", (personId,))
+            self.connection.commit()
+        except mysql.connector.errors.IntegrityError as e:
+            print(e)
+            print("Errore: utente non esistente")
+        return False
     
 def main():
     db = DatabaseManager()

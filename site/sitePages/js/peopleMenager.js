@@ -18,7 +18,7 @@ function init()  {
 }
 
 function remove(id) {
-    fetch('/php/persone/removePerson.php', {
+    fetch(url+'/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -38,10 +38,13 @@ function changeAdmin(id) {
 
 
 function createBremove(id) {
-    let bremove = document.createElement('input')
+    let bremove = document.createElement('button')
     bremove.className="input-item interno";
-    bremove.type="submit";
-    bremove.value="remove";
+    bremove.innerHTML="remove";
+    bremove.onclick = function() {
+        remove(id);
+        document.getElementById('form' + id).remove();
+    }
     return bremove;
 }
 

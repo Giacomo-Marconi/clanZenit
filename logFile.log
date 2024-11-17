@@ -503,3 +503,15 @@
 2024-11-17 16:55:48,848 - shuffle - INFO - update 18 --> 16
 2024-11-17 16:55:49,007 - shuffle - INFO - update 18 --> 16
 2024-11-17 16:56:21,167 - app - INFO - getData from: 127.0.0.1
+2024-11-17 16:59:10,244 - app - INFO - getData from: 127.0.0.1
+2024-11-17 17:00:10,675 - app - INFO - getPerson from: 127.0.0.1
+2024-11-17 17:03:07,012 - app - INFO - getPerson from: 127.0.0.1
+2024-11-17 17:03:08,156 - app - INFO - getData from: 127.0.0.1
+2024-11-17 17:05:54,347 - app - INFO - getData from: 127.0.0.1
+2024-11-17 17:06:00,580 - app - INFO - getData from: 127.0.0.1
+2024-11-17 17:06:02,819 - app - INFO - getData from: 127.0.0.1
+2024-11-17 17:06:05,664 - app - INFO - getData from: 127.0.0.1
+2024-11-17 17:06:08,258 - app - INFO - getData from: 127.0.0.1
+2024-11-17 17:06:10,537 - app - INFO - getData from: 127.0.0.1
+2024-11-17 17:06:13,502 - app - INFO - getPerson from: 127.0.0.1
+2024-11-17 17:08:13,699 - app - INFO - getPerson from: 127.0.0.1

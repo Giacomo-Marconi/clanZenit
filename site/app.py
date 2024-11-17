@@ -58,6 +58,23 @@ def addRole():
     except KeyError:
         log.error("addRole from: " + request.remote_addr)
         abort(400)
+        
+@app.route('/removePerson', methods=['POST'])
+def removePerson():
+    try:
+        db = dbm.DatabaseManager()
+        id = request.json['id']
+        db.removePerson(id)
+        db.close()
+        log.info("removePerson from: " + request.remote_addr)
+        return jsonify({'status': 'ok'}), 200
+    except KeyError:
+        log.error("removePerson from: " + request.remote_addr)
+        abort(400)
+
+
+
+
 
 
 if __name__ == '__main__':
