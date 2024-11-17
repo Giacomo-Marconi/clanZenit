@@ -480,3 +480,26 @@
 2024-11-16 17:17:49,964 - app - INFO - getPerson from: 127.0.0.1
 2024-11-16 17:17:54,041 - app - INFO - getPerson from: 127.0.0.1
 2024-11-16 17:18:59,562 - app - INFO - getPerson from: 127.0.0.1
+2024-11-17 16:52:23,853 - app - INFO - getData from: 127.0.0.1
+2024-11-17 16:53:15,484 - app - INFO - getData from: 127.0.0.1
+2024-11-17 16:53:24,684 - app - INFO - getRole from: 127.0.0.1
+2024-11-17 16:53:58,648 - app - INFO - getData from: 127.0.0.1
+2024-11-17 16:55:46,245 - shuffle - INFO - first rotation
+2024-11-17 16:55:46,246 - shuffle - INFO - second rotation
+2024-11-17 16:55:46,414 - shuffle - INFO - update 12 --> None
+2024-11-17 16:55:46,567 - shuffle - INFO - update 12 --> None
+2024-11-17 16:55:46,777 - shuffle - INFO - update 9 --> 1
+2024-11-17 16:55:46,968 - shuffle - INFO - update 9 --> 1
+2024-11-17 16:55:47,128 - shuffle - INFO - update 10 --> 2
+2024-11-17 16:55:47,279 - shuffle - INFO - update 10 --> 2
+2024-11-17 16:55:47,447 - shuffle - INFO - update 14 --> 3
+2024-11-17 16:55:47,607 - shuffle - INFO - update 14 --> 3
+2024-11-17 16:55:47,779 - shuffle - INFO - update 25 --> 4
+2024-11-17 16:55:47,962 - shuffle - INFO - update 25 --> 4
+2024-11-17 16:55:48,169 - shuffle - INFO - update 13 --> 5
+2024-11-17 16:55:48,328 - shuffle - INFO - update 13 --> 5
+2024-11-17 16:55:48,493 - shuffle - INFO - update 21 --> 15
+2024-11-17 16:55:48,642 - shuffle - INFO - update 21 --> 15
+2024-11-17 16:55:48,848 - shuffle - INFO - update 18 --> 16
+2024-11-17 16:55:49,007 - shuffle - INFO - update 18 --> 16
+2024-11-17 16:56:21,167 - app - INFO - getData from: 127.0.0.1
