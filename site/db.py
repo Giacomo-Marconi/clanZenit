@@ -84,6 +84,8 @@ class DatabaseManager:
             print("Errore: ruolo non esistente")
         return False
     
+
+    
 def main():
     db = DatabaseManager()
     
