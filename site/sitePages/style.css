@@ -196,7 +196,7 @@ footer p{
 
 
 .input-item[type="submit"] {
-    width: 10%;
+    width: 35%;
 }
 
 
@@ -291,6 +291,11 @@ iframe{
     animation: progressAnimation 1s linear forwards;
 }
 
+
+#input-name{
+    width: 50%;
+}
+
 @keyframes progressAnimation {
     100% {
         width: 100%;
@@ -306,7 +311,7 @@ iframe{
         font-size: 20px;
     }
     .input-item[type="submit"] {
-        width: 75px;
+        width: 100%;
     }
     .nome{
         font-size: 15px;

@@ -1,6 +1,8 @@
 const url = "http://127.0.0.1:5000"
 let users;
 function init()  {
+    const add = document.getElementById('people');
+    add.innerHTML = "";
     fetch(url+'/getPerson')
         .then(response => {
             if (!response.ok) {
@@ -18,13 +20,24 @@ function init()  {
 }
 
 function remove(id) {
-    fetch(url+'/', {
+    const data = new FormData();
+    data.append('id', id);
+
+    fetch(url+'/removePerson', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Type': 'application/json',
         },
-        body: 'id=' + encodeURIComponent(id)
+        body: JSON.stringify({
+            id: id
+        })
     })
+        .then(response => {
+            if (!response.ok) {
+                console.log('error removePerson');
+            }
+            return response.json();
+        });
     //console.log("rimosso", id);
 }
 
@@ -90,3 +103,23 @@ function addPerson(){
 }
 
 
+function newPerson() {
+    const name = document.getElementById('input-name').value;
+    fetch(url+'/addPerson', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: name
+        })
+    })
+        .then(response => {
+            if (!response.ok) {
+                console.log('error addPerson');
+            }
+            //relaod page
+            init();
+            name.value = "";
+        });
+}

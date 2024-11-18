@@ -38,7 +38,7 @@ class DatabaseManager:
             print(e)
             print("Errore: nome già esistente / ruolo non esistente")
 
-    def addPerson(self, name):
+    '''def addPerson(self, name):
         try:
             self.cursor.execute("INSERT INTO user (name) VALUES (%s)", (name,))
             self.connection.commit()
@@ -46,7 +46,7 @@ class DatabaseManager:
         except mysql.connector.errors.IntegrityError as e:
             print(e)
             print("Errore: nome già esistente")
-        return False
+        return False'''
     
     def addRole(self, name):
         try:
@@ -73,6 +73,15 @@ class DatabaseManager:
         except mysql.connector.errors.IntegrityError as e:
             print(e)
             print("Errore: utente non esistente")
+        return False
+    
+    def removeRole(self, roleId):
+        try:
+            self.cursor.execute("DELETE FROM role WHERE id = %s", (roleId,))
+            self.connection.commit()
+        except mysql.connector.errors.IntegrityError as e:
+            print(e)
+            print("Errore: ruolo non esistente")
         return False
     
 def main():

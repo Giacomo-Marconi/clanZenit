@@ -28,10 +28,10 @@
 
 
     <!-- input form -->
-    <form class="input-container" action="./addRole" method="post">
-        <input class="input-item"  style="width: 75%" type="text" placeholder="ruolo" name="ruolo" required>
-        <input class="input-item" style="width: 25%" type="submit" value="conferma">
-    </form>
+    <div class="input-container">
+        <input id="role-name" class="input-item"  style="width: 75%" type="text" placeholder="ruolo" name="ruolo" required>
+        <button class="input-item" style="width: 25%" onclick="newRole();">Add</button>
+    </div>
 
     <!-- show role -->
     <div id="people" class="persone-container">

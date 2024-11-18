@@ -50,7 +50,7 @@ def addPerson():
 def addRole():
     try:
         db = dbm.DatabaseManager()
-        name = request.json['ruolo']
+        name = request.json['roleName']
         db.addRole(name)
         db.close()
         log.info("addRole from: " + request.remote_addr)
@@ -64,6 +64,7 @@ def removePerson():
     try:
         db = dbm.DatabaseManager()
         id = request.json['id']
+        print("id: ", id)
         db.removePerson(id)
         db.close()
         log.info("removePerson from: " + request.remote_addr)
@@ -73,8 +74,66 @@ def removePerson():
         abort(400)
 
 
+@app.route('/removeRole', methods=['POST'])
+def removeRole():
+    try:
+        db = dbm.DatabaseManager()
+        id = request.json['roleId']
+        db.removeRole(id)
+        db.close()
+        log.info("removeRole from: " + request.remote_addr)
+        return jsonify({'status': 'ok'}), 200
+    except KeyError:
+        log.error("removeRole from: " + request.remote_addr)
+        abort(400)
+
+'''
+oggi una news ma inutile
+ce no
+
+se gio lalista stampata qui in testa me le ricordo
+non lavevo stampata in testa
+tutto qua. da ora in poi lo userò
+lho detto --> lo farò
+
+tutti e due
+NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+SIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 
+bocco python
+questo è python
+
+
+
+MA A ME COSA ME NE FREGA DI HARRU POTTER SCUSA????????????????????
+
+
+SI COSSRISPONDE AL MIO LIVELLO DI
+
+
+
+NON ME NE FREGA NIENTE!!!!!!!!!!!!
+
+
+ANCORA PEGGIO 
+
+
+MA MI INTERESSAAAA 
+TUTTO CIO CHE PendingDeprecationWarning
+
+
+
+
+ANCHE QUESTO MI INTERESSA E bFA PARTE DELLINSIEME DI PRIMA (TUTTO QUELLO CHE DICI)
+
+
+
+
+TUTTO QUELLO CHE DICI ⊆ TUTTO QUELLO CHE MI INTERESS
+in harry potter c'è il diario di tom riddle (voldemort) che giunge nelle mani di ginny weasly (la sorella del rosso(ron)) --> lei ci scrive e lui gli risponde facendo comparire delle scritte sul diario come fai tu
+
+'''
 
 
 if __name__ == '__main__':

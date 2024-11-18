@@ -1,6 +1,8 @@
 let role;
 const url = "http://127.0.0.1:5000"
 function init()  {
+    const add = document.getElementById('people');
+    add.innerHTML = "";
     fetch(url+'/getRole')
         .then(response => {
             if (!response.ok) {
@@ -28,23 +30,46 @@ function createHiddenInout(id) {
 }
 
 
+function remove(id) {
+    fetch(url+'/removeRole', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            roleId: id
+        })
+    })
+        .then(response => {
+            if (!response.ok) {
+                console.log('error removeRole');
+            }
+            return response.json();
+        });    
+}
+
+
 function createBremove(id) {
-    let bremove = document.createElement('input')
+    let bremove = document.createElement('button')
     bremove.className="input-item interno";
-    bremove.type="submit";
     bremove.value="remove";
+    bremove.innerHTML="remove";
+    bremove.onclick = function() {
+        remove(id);
+        document.getElementById('formR' + id).remove();
+    }
     return bremove;
 }
 
 function createRole(name, id) {
-    let persona = Object.assign(document.createElement('form'), {
+    let persona = Object.assign(document.createElement('div'), {
         id: 'formR' + id,
         className: 'persona role',
-        action: 'php/ruoli/removeRole.php',
-        method: 'POST',
+        //action: 'php/ruoli/removeRole.php',
+        //method: 'POST',
     });
 
-    let hinput = createHiddenInout(id);
+    //let hinput = createHiddenInout(id);
 
     let p = Object.assign(document.createElement('p'), {
         className: 'nome',
@@ -53,7 +78,7 @@ function createRole(name, id) {
 
     let bremove = createBremove(id);
 
-    persona.appendChild(hinput);
+    //persona.appendChild(hinput);
     persona.appendChild(p);
     persona.appendChild(bremove);
 
@@ -67,3 +92,26 @@ function addRole(){
 }
 
 
+function newRole(params) {
+    const roleName = document.getElementById('role-name').value;
+    if (roleName === '') {
+        alert('Inserisci un nome');
+        return;
+    }
+    fetch(url+'/addRole', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            roleName: roleName
+        })
+    })
+        .then(response => {
+            if (!response.ok) {
+                console.log('error addRole');
+            }
+            //relaod page
+            init();
+        });
+}
