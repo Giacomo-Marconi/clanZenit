@@ -1,10 +1,12 @@
-const url = "http://127.0.0.1:5000"
+const url = "http://127.0.0.1"
+const port = ":5000"
 let users;
 const token = localStorage.getItem('token');
+
 function init()  {
     const add = document.getElementById('people');
     add.innerHTML = "";
-    fetch(url+'/getPerson', {
+    fetch(url+port+'/getPerson', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -34,7 +36,7 @@ function remove(id) {
     const data = new FormData();
     data.append('id', id);
 
-    fetch(url+'/removePerson', {
+    fetch(url+port+'/removePerson', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -55,21 +57,12 @@ function remove(id) {
             }
             return response.json();
         });
-    //console.log("rimosso", id);
-}
-
-function changeAdmin(id) {
-    let form = document.getElementById('form' + id);
-    let h = document.getElementById('hidden' + id);
-    h.value = 10000+parseInt(h.value);
-
-    form.submit();
 }
 
 
 function createBremove(id) {
     let bremove = document.createElement('button')
-    bremove.className="input-item interno";
+    // bremove.className="input-item interno";
     bremove.innerHTML="remove";
     bremove.onclick = function() {
         remove(id);
@@ -78,33 +71,104 @@ function createBremove(id) {
     return bremove;
 }
 
-function createHiddenInout(id) {
-    let input = document.createElement('input');
-    input.id="hidden"+id;
-    input.type = "hidden";
-    input.name = "id";
-    input.value = id;
-    return input;
+async function getRoles() {
+    let roles;
+    await fetch(url+port+'/getRole', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': token
+        }
+    })
+    .then(response => {
+        if(response.status == 401){
+            alert("non loggato");
+            window.location.href = url + '/login';
+            return;
+        }
+        if (!response.ok) {
+            console.log('error getRole');
+        }
+        return response.json();
+    })
+    .then(data => {
+        roles = data;
+    })
+    return roles;
+}
+
+ function adminPeople(id, roles, id_role) {
+    const div = document.createElement('div');
+    div.classList.add('admin-people');
+    const button = createBremove(id);
+    const select = document.createElement('select');
+    select.dataset.id = id;
+    
+    const option = document.createElement('option');
+    option.value = null;
+    option.innerHTML = "nessun ruolo";
+    select.appendChild(option);
+    
+    roles.map((role) => {
+        const option = document.createElement('option');
+        option.value = role.id;
+        option.innerHTML = role.role_name;
+        select.appendChild(option);
+    });
+
+    select.value = id_role;
+    div.appendChild(select);
+    div.appendChild(button);
+
+
+    select.addEventListener('change', (event) => {
+        const personId = event.target.dataset.id;
+        const roleId = event.target.value;
+
+        fetch (url+port+'/setRole', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': token
+            },
+            body: JSON.stringify({
+                personId: personId,
+                roleId: roleId
+            })
+        })
+            .then(response => {
+                if(response.status == 401){
+                    alert("non loggato");
+                    window.location.href = url + '/login';
+                    return;
+                }
+                if (!response.ok) {
+                    throw new Error('error setRole');
+                }
+                return response.json();
+            })
+            .then(data => {
+                window.location.reload();
+            });
+    });
+    return div;
 }
 
 
-function createPerson(name, idd) {
+ function createPerson(name, idd, roles, idRole) {
     let classe = "persona";
     let persona = Object.assign(document.createElement('div'), {
         id: 'form' + idd,
         className: classe,
-        //action: '/php/persone/removePerson.php',
-        //method: 'POST',
     });
 
-    //let hinput = createHiddenInout(idd);
 
     let p = Object.assign(document.createElement('p'), {
         className: 'nome',
         innerText: name,
     });
 
-    let bremove = createBremove(idd);
+    let bremove =  adminPeople(idd, roles, idRole);
 
     //persona.appendChild(hinput);
     persona.appendChild(p);
@@ -113,16 +177,17 @@ function createPerson(name, idd) {
     return persona;
 }
 
-function addPerson(){
+async function addPerson(){
+    const roles = await getRoles();
     for (let i = 0; i < users.length; i++) {
-        document.getElementById('people').appendChild(createPerson(users[i].name, users[i].id));
+        document.getElementById('people').appendChild(createPerson(users[i].name, users[i].id, roles, users[i].role));
     }
 }
 
 
 function newPerson() {
     const name = document.getElementById('input-name').value;
-    fetch(url+'/addPerson', {
+    fetch(url+port+'/addPerson', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

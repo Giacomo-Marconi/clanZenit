@@ -20,7 +20,7 @@ class DatabaseManager:
         self.connection.close()
 
     def getPersone(self):
-        self.cursor.execute("SELECT id, name FROM user ORDER BY role desc")
+        self.cursor.execute("SELECT id, name, role FROM user ORDER BY role desc")
         return self.cursor.fetchall()
     
     def getRuoli(self):
@@ -101,11 +101,12 @@ class DatabaseManager:
         return self.cursor.fetchall()
     
     def checkToken(self, token) -> bool:
-        self.cursor.execute("SELECT * FROM admin where session_id = %s and session_expire < now()", (token,))
+        self.cursor.execute("SELECT * FROM admin where session_id = %s and session_expire > now()", (token,))
         data = self.cursor.fetchall()
         if(len(data)==1):
             return True
         return False
+    
 
 
 

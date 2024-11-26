@@ -1,10 +1,11 @@
 let role;
-const url = "http://127.0.0.1:5000"
+const url = "http://127.0.0.1"
+const port = ":5000"
 const token = localStorage.getItem('token');
 function init()  {
     const add = document.getElementById('people');
     add.innerHTML = "";
-    fetch(url+'/getRole',{
+    fetch(url+port+'/getRole',{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -43,7 +44,7 @@ function createHiddenInout(id) {
 
 
 function remove(id) {
-    fetch(url+'/removeRole', {
+    fetch(url+port+'/removeRole', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -57,6 +58,10 @@ function remove(id) {
             if(response.status == 401){
                 alert("non loggato");
                 window.location.href = url + '/login';
+                return;
+            }
+            if(response.status == 402){
+                alert("qs ruolo ha dei membri");
                 return;
             }
             if (!response.ok) {
@@ -116,7 +121,7 @@ function newRole(params) {
         alert('Inserisci un nome');
         return;
     }
-    fetch(url+'/addRole', {
+    fetch(url+port+'/addRole', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

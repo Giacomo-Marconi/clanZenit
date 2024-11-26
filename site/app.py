@@ -8,10 +8,9 @@ from datetime import datetime
 
 log = logger.Log('app', 'logFile.log').get_logger()
 app = Flask(__name__)
-#CORS(app)
+
 CORS(app, resources={r"/*": {
-    #
-    #"origins": "http://127.0.0.1:5500",
+    
     "methods": ["GET", "POST", "OPTIONS"],
     "allow_headers": ["Content-Type", "Authorization"]
 }})
@@ -40,7 +39,6 @@ def home():
     db.close()
     return jsonify(risp), 200
 
-
 @app.route('/getRole', methods=['GET'])
 def getRole():
     db = dbm.DatabaseManager()
@@ -54,7 +52,6 @@ def getRole():
     risp = db.getRuoli()
     db.close()
     return jsonify(risp), 200
-
 
 @app.route('/getPerson', methods=['GET'])
 def getPerson():
@@ -133,7 +130,6 @@ def removePerson():
         log.error("removePerson from: " + request.remote_addr)
         abort(400)
 
-
 @app.route('/removeRole', methods=['POST'])
 def removeRole():
     db = dbm.DatabaseManager()
@@ -147,12 +143,38 @@ def removeRole():
     try:
         db = dbm.DatabaseManager()
         id = request.json['roleId']
-        db.removeRole(id)
+        if(db.removeRole(id)):
+            log.info("removed Role from: " + request.remote_addr)
+            return jsonify({'status': 'ok'}), 200
+        log.info("filed remove role from: " + request.remote_addr)
         db.close()
-        log.info("removeRole from: " + request.remote_addr)
-        return jsonify({'status': 'ok'}), 200
+        return jsonify({'status': 'no'}), 402
     except KeyError:
         log.error("removeRole from: " + request.remote_addr)
+        abort(400)
+
+@app.route('/setRole', methods=['POST'])
+def setRole():
+    db = dbm.DatabaseManager()
+    
+    if(db.checkToken(request.headers.get('Authorization')) == False):
+        log.error("addPerson from: " + request.remote_addr)
+        db.close()
+        return jsonify({'status': 'no'}), 401
+    db.close()
+    
+    try:
+        db = dbm.DatabaseManager()
+        id = request.json['personId']
+        role = request.json['roleId']
+        if(db.updateRole(id, role)):
+            log.info("setRole from: " + request.remote_addr)
+            return jsonify({'status': 'ok'}), 200
+        log.info("filed setRole from: " + request.remote_addr)
+        db.close()
+        return jsonify({'status': 'no'}), 402
+    except KeyError:
+        log.error("setRole from: " + request.remote_addr)
         abort(400)
 
 @app.route('/login', methods=['POST', 'OPTIONS'])
