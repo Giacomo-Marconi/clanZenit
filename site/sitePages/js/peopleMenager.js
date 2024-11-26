@@ -1,10 +1,21 @@
 const url = "http://127.0.0.1:5000"
 let users;
+const token = localStorage.getItem('token');
 function init()  {
     const add = document.getElementById('people');
     add.innerHTML = "";
-    fetch(url+'/getPerson')
+    fetch(url+'/getPerson', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': token
+        }})
         .then(response => {
+            if(response.status == 401){
+                alert("non loggato");
+                window.location.href = url + '/login';
+                return;
+            }
             if (!response.ok) {
                 throw new Error('error getgetPerson');
             }
@@ -27,12 +38,18 @@ function remove(id) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': token
         },
         body: JSON.stringify({
             id: id
         })
     })
         .then(response => {
+            if(response.status == 401){
+                alert("non loggato");
+                window.location.href = url + '/login';
+                return;
+            }
             if (!response.ok) {
                 console.log('error removePerson');
             }
@@ -109,12 +126,18 @@ function newPerson() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': token
         },
         body: JSON.stringify({
             name: name
         })
     })
         .then(response => {
+            if(response.status == 401){
+                alert("non loggato");
+                window.location.href = url + '/login';
+                return;
+            }
             if (!response.ok) {
                 console.log('error addPerson');
             }

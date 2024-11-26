@@ -1,12 +1,24 @@
 let role;
 const url = "http://127.0.0.1:5000"
+const token = localStorage.getItem('token');
 function init()  {
     const add = document.getElementById('people');
     add.innerHTML = "";
-    fetch(url+'/getRole')
+    fetch(url+'/getRole',{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': token
+        }
+    })
         .then(response => {
+            if(response.status == 401){
+                alert("non loggato");
+                window.location.href = url + '/login';
+                return;
+            }
             if (!response.ok) {
-                throw new Error('error getRole.php');
+                throw new Error('error getRole');
             }
             return response.json();
         })
@@ -35,12 +47,18 @@ function remove(id) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': token
         },
         body: JSON.stringify({
             roleId: id
         })
     })
         .then(response => {
+            if(response.status == 401){
+                alert("non loggato");
+                window.location.href = url + '/login';
+                return;
+            }
             if (!response.ok) {
                 console.log('error removeRole');
             }
@@ -102,12 +120,18 @@ function newRole(params) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': token
         },
         body: JSON.stringify({
             roleName: roleName
         })
     })
         .then(response => {
+            if(response.status == 401){
+                alert("non loggato");
+                window.location.href = url + '/login';
+                return;
+            }
             if (!response.ok) {
                 console.log('error addRole');
             }
