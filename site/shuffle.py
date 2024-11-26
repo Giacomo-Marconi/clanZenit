@@ -91,3 +91,4 @@ for i in range(1, len(pair)):
     db.updateRole(pair[i][1], pairToRole[i] if pairToRole[i]!=-1 else None)
     log.info("update %s --> " % (pair[i][0]) + str(pairToRole[i] if pairToRole[i]!=-1 else None))
     #print("update %s --> " % (pair[i][1]), pairToRole[i] if pairToRole[i]!=-1 else None)
+db.close()
