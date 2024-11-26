@@ -5,34 +5,26 @@
     <meta charset="UTF-8">
     <title>Clan Test</title>
     <link rel="icon" href="./img/valpo1.png" type="image/png">
-    
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="icon" href="img/logo.png"> -->
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/person.css">
     <script src="./js/peopleMenager.js"></script>
 </head>
 <body class="body" onload="init();">
-<!-- 
-<div id="del1" class="blur"></div>
-<div id="del2" class="div-load">
-    <div id="progressbar" class="progress">
-    </div>
-</div>
--->
 
 
-    <nav>
+    <div class="nav">
         <a class="flex" href="index.html"><img class="icon" src="./img/home.svg" alt="home"></a>
         <p class="title">People page</p>
         <a class="flex" href="role.html"><img class="icon" src="./img/role.svg" alt="role"></a>
-    </nav>
+    </div>
 
 
     <div class="input-container">
-        <input style="box-shadow: none;" id="input-name" class="input-item" type="text" placeholder="name" name="name" required>
-        <button class="input-item" onclick="newPerson();" style="box-shadow: none;">Add</button>
+        <input id="input-name" type="text" placeholder="name" name="name" required>
+        <button id="input-submit" onclick="newPerson();">Add</button>
     </div>
 
-    <!-- show people -->
+    
     <div class="cont">
         <div id="people" class="persone-container">
             

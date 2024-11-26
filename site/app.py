@@ -46,6 +46,7 @@ def getRole():
     tok = request.headers.get('Authorization')
     if(db.checkToken(tok) == False):
         log.error("getPerson from: " + request.remote_addr)
+        db.close()
         return jsonify({'status': 'no'}), 401
     
     log.info("getRole from: " + request.remote_addr)
@@ -60,6 +61,7 @@ def getPerson():
     tok = request.headers.get('Authorization')
     if(db.checkToken(tok) == False):
         log.error("getPerson from: " + request.remote_addr)
+        db.close()
         return jsonify({'status': 'no'}), 401
     
     log.info("getPerson from: " + request.remote_addr)
@@ -145,6 +147,7 @@ def removeRole():
         id = request.json['roleId']
         if(db.removeRole(id)):
             log.info("removed Role from: " + request.remote_addr)
+            db.close()
             return jsonify({'status': 'ok'}), 200
         log.info("filed remove role from: " + request.remote_addr)
         db.close()
@@ -167,8 +170,11 @@ def setRole():
         db = dbm.DatabaseManager()
         id = request.json['personId']
         role = request.json['roleId']
+        if(role == 'null'):
+            role = None
         if(db.updateRole(id, role)):
             log.info("setRole from: " + request.remote_addr)
+            db.close()
             return jsonify({'status': 'ok'}), 200
         log.info("filed setRole from: " + request.remote_addr)
         db.close()
@@ -196,6 +202,7 @@ def login():
             print("token: ", token)
             
             resp = make_response(jsonify({'status': 'ok', 'token': token[0]['session_id']}), 200)
+            db.close()
             return resp
 
         

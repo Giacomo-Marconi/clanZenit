@@ -13,7 +13,6 @@ function login() {
     })
     .then((response) => {
         if(response.status == 200){
-            alert("Login riuscito");
             return response.json();
         }
         else if(response.status == 401){

@@ -74,7 +74,7 @@ function remove(id) {
 
 function createBremove(id) {
     let bremove = document.createElement('button')
-    bremove.className="input-item interno";
+    bremove.className="butt-remove";
     bremove.value="remove";
     bremove.innerHTML="remove";
     bremove.onclick = function() {
@@ -87,7 +87,7 @@ function createBremove(id) {
 function createRole(name, id) {
     let persona = Object.assign(document.createElement('div'), {
         id: 'formR' + id,
-        className: 'persona role',
+        className: 'riga',
         //action: 'php/ruoli/removeRole.php',
         //method: 'POST',
     });
@@ -101,7 +101,6 @@ function createRole(name, id) {
 
     let bremove = createBremove(id);
 
-    //persona.appendChild(hinput);
     persona.appendChild(p);
     persona.appendChild(bremove);
 

@@ -1,0 +1,54 @@
+.cont{
+    overflow: auto;
+    width: 90%;
+    height: 86vh;
+}
+
+.persone-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.riga{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    height: 50px;
+}
+
+.persona{
+    padding: 1vh;
+    height: 100%;
+    background-color: #fff;
+    /* box-shadow: 0 0 68px -11px rgba(0, 0, 0, 0.25); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: #CEECF0;
+}
+
+.user-name{
+    width: 55%;
+}
+
+.user-role{
+    width: 45%;
+}
+
+.nome{
+    font-size: 125%;
+    font-weight: 800;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}

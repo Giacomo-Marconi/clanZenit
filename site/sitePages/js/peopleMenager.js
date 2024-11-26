@@ -156,7 +156,7 @@ async function getRoles() {
 
 
  function createPerson(name, idd, roles, idRole) {
-    let classe = "persona";
+    let classe = "riga";
     let persona = Object.assign(document.createElement('div'), {
         id: 'form' + idd,
         className: classe,
