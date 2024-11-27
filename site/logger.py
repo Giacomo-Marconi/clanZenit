@@ -1,7 +1,7 @@
 import logging
 
 class Log:
-    def __init__(self, name, log_file, level=logging.INFO):
+    def __init__(self, name, log_file, level=logging.DEBUG):
         self.logger = logging.getLogger(name)
         self.logger.setLevel(level)
 

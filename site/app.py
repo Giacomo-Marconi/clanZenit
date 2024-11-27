@@ -5,6 +5,7 @@ import logger
 import hashlib
 import os
 from datetime import datetime
+import shuffle as sh
 
 log = logger.Log('app', 'logFile.log').get_logger()
 app = Flask(__name__)
@@ -19,6 +20,8 @@ keyEnv = os.getenv("keySession")
 if keyEnv is None:
     log.error("key not found")
     exit(1)
+
+log.info("START")
 
 app.secret_key = hashlib.sha512(keyEnv.encode()).hexdigest()
 
@@ -214,6 +217,20 @@ def login():
         log.error("login from: " + request.remote_addr)
         abort(400)
 
+@app.route('/shuffle', methods=['POST'])
+def shuffle():
+    db = dbm.DatabaseManager()
+    
+    if(db.checkToken(request.headers.get('Authorization')) == False):
+        log.error("addPerson from: " + request.remote_addr)
+        db.close()
+        return jsonify({'status': 'no'}), 401
+    db.close()
+    
+    log.info("shuffle from: " + request.remote_addr)
+    if(sh.shuffle()):
+        return jsonify({'status': 'ok'}), 200
+    return jsonify({'status': 'no'}), 402
 '''
 oggi una news ma inutile
 ce no
