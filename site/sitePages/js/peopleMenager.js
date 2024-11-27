@@ -211,3 +211,29 @@ function newPerson() {
             name.value = "";
         });
 }
+
+
+function shuffle() {
+    const confirm = window.confirm("confermi shuffle?");
+    if(confirm){
+        fetch(url+port+'/shuffle', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': token
+            }
+        })
+            .then(response => {
+                if(response.status == 401){
+                    alert("non loggato");
+                    window.location.href = url + '/login';
+                    return;
+                }
+                if (!response.ok) {
+                    alert("error shuffle");
+                    console.log('error shuffle');
+                }
+                init();
+            });
+    }
+}

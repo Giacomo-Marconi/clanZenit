@@ -1259,3 +1259,73 @@
 2024-11-27 08:23:04,437 - shuffle - INFO - update 25 --> 4
 2024-11-27 08:23:04,505 - shuffle - INFO - update 15 --> 5
 2024-11-27 08:23:04,581 - shuffle - INFO - update 20 --> 5
+2024-11-27 08:42:03,792 - shuffle - INFO - first rotation
+2024-11-27 08:42:03,792 - shuffle - INFO - second rotation
+2024-11-27 08:46:29,948 - app - INFO - key: giacomoFiglioloooGiacomooofigliologiacomoFigliuolo
+2024-11-27 08:46:37,458 - app - INFO - START
+2024-11-27 08:46:37,565 - app - INFO - START
+2024-11-27 08:46:51,972 - app - INFO - START
+2024-11-27 08:46:52,101 - app - INFO - START
+2024-11-27 11:09:05,012 - app - INFO - START
+2024-11-27 11:09:05,140 - app - INFO - START
+2024-11-27 11:09:17,488 - app - INFO - getData from: 127.0.0.1
+2024-11-27 11:09:57,805 - app - INFO - getData from: 127.0.0.1
+2024-11-27 11:10:22,176 - app - INFO - getData from: 127.0.0.1
+2024-11-27 11:10:59,854 - app - INFO - getData from: 127.0.0.1
+2024-11-27 11:41:11,552 - app - INFO - getData from: 127.0.0.1
+2024-11-27 17:57:32,201 - app - INFO - START
+2024-11-27 17:57:32,397 - app - INFO - START
+2024-11-27 17:57:55,725 - app - INFO - getData from: 127.0.0.1
+2024-11-27 17:57:57,811 - app - ERROR - getPerson from: 127.0.0.1
+2024-11-27 17:57:59,725 - app - ERROR - getPerson from: 127.0.0.1
+2024-11-27 17:58:17,974 - app - INFO - getPerson from: 127.0.0.1
+2024-11-27 17:58:18,372 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:00:08,281 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:00:35,389 - app - INFO - getPerson from: 127.0.0.1
+2024-11-27 18:00:35,860 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:02:47,600 - app - INFO - START
+2024-11-27 18:02:52,793 - app - INFO - START
+2024-11-27 18:03:00,004 - app - INFO - START
+2024-11-27 18:03:02,183 - app - INFO - START
+2024-11-27 18:03:04,381 - app - INFO - START
+2024-11-27 18:03:15,638 - app - INFO - START
+2024-11-27 18:03:23,847 - app - INFO - START
+2024-11-27 18:06:30,879 - app - INFO - START
+2024-11-27 18:06:31,006 - app - INFO - START
+2024-11-27 18:06:41,756 - app - INFO - getPerson from: 127.0.0.1
+2024-11-27 18:06:42,286 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:06:45,261 - app - INFO - shuffle from: 127.0.0.1
+2024-11-27 18:07:10,646 - app - INFO - START
+2024-11-27 18:07:21,930 - app - INFO - START
+2024-11-27 18:07:28,919 - app - INFO - getPerson from: 127.0.0.1
+2024-11-27 18:07:32,181 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:07:43,318 - app - INFO - shuffle from: 127.0.0.1
+2024-11-27 18:07:43,319 - shuffle - ERROR - shuffle: cannot access local variable 'db' where it is not associated with a value
+2024-11-27 18:08:14,439 - app - INFO - START
+2024-11-27 18:08:21,693 - app - INFO - START
+2024-11-27 18:08:42,038 - app - INFO - START
+2024-11-27 18:08:44,221 - app - INFO - START
+2024-11-27 18:08:50,970 - app - INFO - getPerson from: 127.0.0.1
+2024-11-27 18:08:51,431 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:08:54,101 - app - INFO - shuffle from: 127.0.0.1
+2024-11-27 18:08:54,465 - shuffle - INFO - first rotation
+2024-11-27 18:08:54,466 - shuffle - INFO - second rotation
+2024-11-27 18:08:54,542 - shuffle - INFO - update 33 --> None
+2024-11-27 18:08:54,630 - shuffle - INFO - update 18 --> None
+2024-11-27 18:08:54,694 - shuffle - INFO - update 22 --> None
+2024-11-27 18:08:54,767 - shuffle - INFO - update 16 --> None
+2024-11-27 18:08:54,844 - shuffle - INFO - update 24 --> 1
+2024-11-27 18:08:54,974 - shuffle - INFO - update 12 --> 1
+2024-11-27 18:08:55,054 - shuffle - INFO - update 23 --> 2
+2024-11-27 18:08:55,126 - shuffle - INFO - update 19 --> 2
+2024-11-27 18:08:55,209 - shuffle - INFO - update 14 --> 3
+2024-11-27 18:08:55,284 - shuffle - INFO - update 15 --> 3
+2024-11-27 18:08:55,356 - shuffle - INFO - update 1 --> 4
+2024-11-27 18:08:55,439 - shuffle - INFO - update 20 --> 4
+2024-11-27 18:08:55,513 - shuffle - INFO - update 13 --> 5
+2024-11-27 18:08:55,603 - shuffle - INFO - update 25 --> 5
+2024-11-27 18:08:55,914 - app - INFO - getPerson from: 127.0.0.1
+2024-11-27 18:08:56,283 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:09:09,469 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:09:52,059 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:09:54,415 - app - INFO - getData from: 127.0.0.1
