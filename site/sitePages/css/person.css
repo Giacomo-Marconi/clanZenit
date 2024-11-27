@@ -96,3 +96,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+
+@media screen and (max-width: 800px){
+    body{
+        padding-bottom: 4vh; 
+    }
+    .cont{
+        height: 84vh;
+    }
+}
