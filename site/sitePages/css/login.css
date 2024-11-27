@@ -28,3 +28,9 @@
     border-radius: 1000px;
     border: black 1px solid;
 }
+
+@media screen and (max-width: 800px){
+    .login{
+        width: 80vw;
+    }
+}

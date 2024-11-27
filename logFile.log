@@ -1329,3 +1329,9 @@
 2024-11-27 18:09:09,469 - app - INFO - getRole from: 127.0.0.1
 2024-11-27 18:09:52,059 - app - INFO - getRole from: 127.0.0.1
 2024-11-27 18:09:54,415 - app - INFO - getData from: 127.0.0.1
+2024-11-27 18:11:45,187 - app - INFO - getData from: 127.0.0.1
+2024-11-27 18:14:28,546 - app - INFO - getPerson from: 127.0.0.1
+2024-11-27 18:14:29,126 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:14:30,278 - app - INFO - getRole from: 127.0.0.1
+2024-11-27 18:14:34,876 - app - INFO - getPerson from: 127.0.0.1
+2024-11-27 18:14:35,232 - app - INFO - getRole from: 127.0.0.1
