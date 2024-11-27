@@ -1185,3 +1185,77 @@
 2024-11-26 21:17:30,238 - app - INFO - getPerson from: 127.0.0.1
 2024-11-26 21:17:31,956 - app - INFO - getRole from: 127.0.0.1
 2024-11-26 21:17:40,213 - app - INFO - getData from: 127.0.0.1
+2024-11-27 08:17:25,734 - shuffle - INFO - first rotation
+2024-11-27 08:17:25,734 - shuffle - INFO - second rotation
+2024-11-27 08:17:25,734 - shuffle - INFO - update 22 --> None
+2024-11-27 08:17:25,734 - shuffle - INFO - update 22 --> None
+2024-11-27 08:17:25,734 - shuffle - INFO - update 18 --> 1
+2024-11-27 08:17:25,734 - shuffle - INFO - update 18 --> 1
+2024-11-27 08:17:25,734 - shuffle - INFO - update 13 --> 2
+2024-11-27 08:17:25,734 - shuffle - INFO - update 13 --> 2
+2024-11-27 08:17:25,734 - shuffle - INFO - update 10 --> 3
+2024-11-27 08:17:25,734 - shuffle - INFO - update 10 --> 3
+2024-11-27 08:17:25,734 - shuffle - INFO - update 19 --> 4
+2024-11-27 08:17:25,734 - shuffle - INFO - update 19 --> 4
+2024-11-27 08:17:25,734 - shuffle - INFO - update 15 --> 5
+2024-11-27 08:17:25,734 - shuffle - INFO - update 15 --> 5
+2024-11-27 08:18:14,764 - shuffle - INFO - first rotation
+2024-11-27 08:18:14,765 - shuffle - INFO - second rotation
+2024-11-27 08:18:14,766 - shuffle - INFO - update 22 --> None
+2024-11-27 08:18:14,766 - shuffle - INFO - update 22 --> None
+2024-11-27 08:18:14,766 - shuffle - INFO - update 18 --> 1
+2024-11-27 08:18:14,766 - shuffle - INFO - update 18 --> 1
+2024-11-27 08:18:14,766 - shuffle - INFO - update 13 --> 2
+2024-11-27 08:18:14,766 - shuffle - INFO - update 13 --> 2
+2024-11-27 08:18:14,766 - shuffle - INFO - update 10 --> 3
+2024-11-27 08:18:14,766 - shuffle - INFO - update 10 --> 3
+2024-11-27 08:18:14,766 - shuffle - INFO - update 19 --> 4
+2024-11-27 08:18:14,766 - shuffle - INFO - update 19 --> 4
+2024-11-27 08:18:14,766 - shuffle - INFO - update 15 --> 5
+2024-11-27 08:18:14,766 - shuffle - INFO - update 15 --> 5
+2024-11-27 08:18:50,098 - shuffle - INFO - first rotation
+2024-11-27 08:18:50,099 - shuffle - INFO - second rotation
+2024-11-27 08:18:50,099 - shuffle - INFO - update 22 --> None
+2024-11-27 08:18:50,099 - shuffle - INFO - update 14 --> None
+2024-11-27 08:18:50,099 - shuffle - INFO - update 18 --> 1
+2024-11-27 08:18:50,099 - shuffle - INFO - update 1 --> 1
+2024-11-27 08:18:50,099 - shuffle - INFO - update 13 --> 2
+2024-11-27 08:18:50,100 - shuffle - INFO - update 16 --> 2
+2024-11-27 08:18:50,100 - shuffle - INFO - update 10 --> 3
+2024-11-27 08:18:50,100 - shuffle - INFO - update 12 --> 3
+2024-11-27 08:18:50,100 - shuffle - INFO - update 19 --> 4
+2024-11-27 08:18:50,100 - shuffle - INFO - update 25 --> 4
+2024-11-27 08:18:50,100 - shuffle - INFO - update 15 --> 5
+2024-11-27 08:18:50,100 - shuffle - INFO - update 20 --> 5
+2024-11-27 08:19:16,113 - shuffle - INFO - first rotation
+2024-11-27 08:19:16,113 - shuffle - INFO - second rotation
+2024-11-27 08:19:16,114 - shuffle - INFO - update 23 --> None
+2024-11-27 08:19:16,114 - shuffle - INFO - update 24 --> None
+2024-11-27 08:19:16,114 - shuffle - INFO - update 22 --> None
+2024-11-27 08:19:16,114 - shuffle - INFO - update 14 --> None
+2024-11-27 08:19:16,114 - shuffle - INFO - update 18 --> 1
+2024-11-27 08:19:16,114 - shuffle - INFO - update 1 --> 1
+2024-11-27 08:19:16,115 - shuffle - INFO - update 13 --> 2
+2024-11-27 08:19:16,115 - shuffle - INFO - update 16 --> 2
+2024-11-27 08:19:16,115 - shuffle - INFO - update 10 --> 3
+2024-11-27 08:19:16,115 - shuffle - INFO - update 12 --> 3
+2024-11-27 08:19:16,115 - shuffle - INFO - update 19 --> 4
+2024-11-27 08:19:16,115 - shuffle - INFO - update 25 --> 4
+2024-11-27 08:19:16,115 - shuffle - INFO - update 15 --> 5
+2024-11-27 08:19:16,115 - shuffle - INFO - update 20 --> 5
+2024-11-27 08:23:03,615 - shuffle - INFO - first rotation
+2024-11-27 08:23:03,616 - shuffle - INFO - second rotation
+2024-11-27 08:23:03,677 - shuffle - INFO - update 23 --> None
+2024-11-27 08:23:03,767 - shuffle - INFO - update 24 --> None
+2024-11-27 08:23:03,833 - shuffle - INFO - update 22 --> None
+2024-11-27 08:23:03,898 - shuffle - INFO - update 14 --> None
+2024-11-27 08:23:03,976 - shuffle - INFO - update 18 --> 1
+2024-11-27 08:23:04,039 - shuffle - INFO - update 1 --> 1
+2024-11-27 08:23:04,110 - shuffle - INFO - update 13 --> 2
+2024-11-27 08:23:04,176 - shuffle - INFO - update 16 --> 2
+2024-11-27 08:23:04,247 - shuffle - INFO - update 10 --> 3
+2024-11-27 08:23:04,310 - shuffle - INFO - update 12 --> 3
+2024-11-27 08:23:04,377 - shuffle - INFO - update 19 --> 4
+2024-11-27 08:23:04,437 - shuffle - INFO - update 25 --> 4
+2024-11-27 08:23:04,505 - shuffle - INFO - update 15 --> 5
+2024-11-27 08:23:04,581 - shuffle - INFO - update 20 --> 5
