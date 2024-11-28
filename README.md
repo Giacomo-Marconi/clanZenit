@@ -92,7 +92,7 @@ Follow the steps below to set up the ClanZenit project:
 ## Configuration
 
 ### Environment Variables
-Ensure the following environment variables are set in your `.env` file:
+Ensure the following environment variables are set in your `.venv/bin/activate` file:
 - `dbUser`: Database username
 - `dbPassword`: Database password
 - `keySession`: A secure key for Flask sessions
