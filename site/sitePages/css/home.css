@@ -55,9 +55,9 @@
 
 @media screen and (max-width: 800px){
     body{
-        padding-bottom: 4vh; 
+        padding-bottom: 13vh; 
     }
     .cont{
-        height: 84vh;
+        height: 75vh;
     }
 }

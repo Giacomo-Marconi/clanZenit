@@ -83,7 +83,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
 }
 
 .admin-people select{
@@ -100,9 +99,12 @@
 
 @media screen and (max-width: 800px){
     body{
-        padding-bottom: 4vh; 
+        padding-bottom: 8vh; 
     }
     .cont{
-        height: 84vh;
+        height: 80vh;
+    }
+    .admin-people button{
+        padding-right: 0;
     }
 }
