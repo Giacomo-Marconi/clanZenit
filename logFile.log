@@ -1335,3 +1335,262 @@
 2024-11-27 18:14:30,278 - app - INFO - getRole from: 127.0.0.1
 2024-11-27 18:14:34,876 - app - INFO - getPerson from: 127.0.0.1
 2024-11-27 18:14:35,232 - app - INFO - getRole from: 127.0.0.1
+2025-03-16 18:06:37,373 - app - INFO - START
+2025-03-16 18:06:37,514 - app - INFO - START
+2025-03-16 18:07:11,932 - app - INFO - getData from: 127.0.0.1
+2025-03-16 18:07:14,810 - app - ERROR - getPerson from: 127.0.0.1
+2025-03-16 18:07:16,415 - app - ERROR - getPerson from: 127.0.0.1
+2025-03-17 08:01:55,001 - shuffle - INFO - first rotation
+2025-03-17 08:01:55,002 - shuffle - INFO - second rotation
+2025-03-17 08:01:55,147 - shuffle - INFO - update 25 --> None
+2025-03-17 08:01:55,376 - shuffle - INFO - update 13 --> None
+2025-03-17 08:01:55,565 - shuffle - INFO - update 14 --> None
+2025-03-17 08:01:55,770 - shuffle - INFO - update 22 --> None
+2025-03-17 08:01:55,972 - shuffle - INFO - update 20 --> 1
+2025-03-17 08:01:56,119 - shuffle - INFO - update 18 --> 1
+2025-03-17 08:01:56,286 - shuffle - INFO - update 19 --> 2
+2025-03-17 08:01:56,473 - shuffle - INFO - update 12 --> 2
+2025-03-17 08:01:56,642 - shuffle - INFO - update 16 --> 3
+2025-03-17 08:01:56,825 - shuffle - INFO - update 1 --> 3
+2025-03-17 08:01:56,986 - shuffle - INFO - update 24 --> 4
+2025-03-17 08:01:57,183 - shuffle - INFO - update 15 --> 4
+2025-03-17 08:01:57,346 - shuffle - INFO - update 33 --> 5
+2025-03-17 08:01:57,510 - shuffle - INFO - update 23 --> 5
+2025-03-17 08:02:13,406 - shuffle - INFO - first rotation
+2025-03-17 08:02:13,407 - shuffle - INFO - second rotation
+2025-03-17 08:02:13,560 - shuffle - INFO - update 25 --> None
+2025-03-17 08:02:13,725 - shuffle - INFO - update 18 --> None
+2025-03-17 08:02:13,886 - shuffle - INFO - update 13 --> None
+2025-03-17 08:02:14,057 - shuffle - INFO - update 12 --> None
+2025-03-17 08:02:14,257 - shuffle - INFO - update 22 --> 1
+2025-03-17 08:02:14,434 - shuffle - INFO - update 1 --> 1
+2025-03-17 08:02:14,603 - shuffle - INFO - update 14 --> 2
+2025-03-17 08:02:14,798 - shuffle - INFO - update 15 --> 2
+2025-03-17 08:02:14,962 - shuffle - INFO - update 20 --> 3
+2025-03-17 08:02:15,329 - shuffle - INFO - update 23 --> 3
+2025-03-17 08:02:15,519 - shuffle - INFO - update 19 --> 4
+2025-03-17 08:02:15,688 - shuffle - INFO - update 33 --> 4
+2025-03-17 08:02:15,894 - shuffle - INFO - update 16 --> 5
+2025-03-17 08:02:16,092 - shuffle - INFO - update 24 --> 5
+2025-03-17 08:02:24,811 - shuffle - INFO - first rotation
+2025-03-17 08:02:24,812 - shuffle - INFO - second rotation
+2025-03-17 08:02:24,974 - shuffle - INFO - update 25 --> None
+2025-03-17 08:02:25,097 - shuffle - INFO - update 1 --> None
+2025-03-17 08:02:25,258 - shuffle - INFO - update 12 --> None
+2025-03-17 08:02:25,399 - shuffle - INFO - update 14 --> None
+2025-03-17 08:02:25,519 - shuffle - INFO - update 18 --> 1
+2025-03-17 08:02:25,712 - shuffle - INFO - update 20 --> 1
+2025-03-17 08:02:25,865 - shuffle - INFO - update 13 --> 2
+2025-03-17 08:02:26,009 - shuffle - INFO - update 19 --> 2
+2025-03-17 08:02:26,178 - shuffle - INFO - update 22 --> 3
+2025-03-17 08:02:26,339 - shuffle - INFO - update 16 --> 3
+2025-03-17 08:02:26,511 - shuffle - INFO - update 15 --> 4
+2025-03-17 08:02:26,668 - shuffle - INFO - update 24 --> 4
+2025-03-17 08:02:26,844 - shuffle - INFO - update 23 --> 5
+2025-03-17 08:02:27,016 - shuffle - INFO - update 33 --> 5
+2025-03-17 08:02:39,582 - shuffle - INFO - first rotation
+2025-03-17 08:02:39,582 - shuffle - INFO - second rotation
+2025-03-17 08:02:39,793 - shuffle - INFO - update 25 --> None
+2025-03-17 08:02:40,006 - shuffle - INFO - update 18 --> None
+2025-03-17 08:02:40,130 - shuffle - INFO - update 1 --> None
+2025-03-17 08:02:40,280 - shuffle - INFO - update 13 --> None
+2025-03-17 08:02:40,449 - shuffle - INFO - update 14 --> 1
+2025-03-17 08:02:40,650 - shuffle - INFO - update 16 --> 1
+2025-03-17 08:02:40,804 - shuffle - INFO - update 12 --> 2
+2025-03-17 08:02:40,945 - shuffle - INFO - update 15 --> 2
+2025-03-17 08:02:41,151 - shuffle - INFO - update 20 --> 3
+2025-03-17 08:02:41,300 - shuffle - INFO - update 23 --> 3
+2025-03-17 08:02:41,521 - shuffle - INFO - update 19 --> 4
+2025-03-17 08:02:41,656 - shuffle - INFO - update 33 --> 4
+2025-03-17 08:02:41,802 - shuffle - INFO - update 22 --> 5
+2025-03-17 08:02:41,972 - shuffle - INFO - update 24 --> 5
+2025-03-17 08:03:01,087 - app - INFO - START
+2025-03-17 08:03:01,220 - app - INFO - START
+2025-03-17 08:03:05,715 - app - INFO - getData from: 127.0.0.1
+2025-03-17 08:14:34,521 - app - INFO - START
+2025-03-17 08:17:42,352 - shuffle - INFO - first rotation
+2025-03-17 08:17:42,352 - shuffle - INFO - second rotation
+2025-03-17 08:17:42,473 - shuffle - INFO - update 25 --> None
+2025-03-17 08:17:42,627 - shuffle - INFO - update 18 --> None
+2025-03-17 08:17:42,779 - shuffle - INFO - update 1 --> None
+2025-03-17 08:17:43,022 - shuffle - INFO - update 13 --> None
+2025-03-17 08:17:43,304 - shuffle - INFO - update 14 --> 1
+2025-03-17 08:17:43,542 - shuffle - INFO - update 16 --> 1
+2025-03-17 08:17:43,707 - shuffle - INFO - update 12 --> 2
+2025-03-17 08:17:44,321 - shuffle - INFO - update 15 --> 2
+2025-03-17 08:17:44,457 - shuffle - INFO - update 20 --> 3
+2025-03-17 08:17:44,632 - shuffle - INFO - update 23 --> 3
+2025-03-17 08:17:52,681 - shuffle - INFO - first rotation
+2025-03-17 08:17:52,682 - shuffle - INFO - second rotation
+2025-03-17 08:17:52,789 - shuffle - INFO - update 25 --> None
+2025-03-17 08:17:52,949 - shuffle - INFO - update 14 --> None
+2025-03-17 08:17:53,086 - shuffle - INFO - update 1 --> None
+2025-03-17 08:17:53,231 - shuffle - INFO - update 15 --> None
+2025-03-17 08:17:53,366 - shuffle - INFO - update 18 --> 1
+2025-03-17 08:17:53,658 - shuffle - INFO - update 23 --> 1
+2025-03-17 08:17:53,832 - shuffle - INFO - update 13 --> 2
+2025-03-17 08:17:53,952 - shuffle - INFO - update 20 --> 2
+2025-03-17 08:17:54,096 - shuffle - INFO - update 16 --> 3
+2025-03-17 08:17:54,257 - shuffle - INFO - update 33 --> 3
+2025-03-17 08:17:54,401 - shuffle - INFO - update 19 --> 4
+2025-03-17 08:17:54,534 - shuffle - INFO - update 24 --> 4
+2025-03-17 08:17:54,671 - shuffle - INFO - update 12 --> 5
+2025-03-17 08:17:54,813 - shuffle - INFO - update 22 --> 5
+2025-03-17 08:17:58,842 - shuffle - INFO - first rotation
+2025-03-17 08:17:58,842 - shuffle - INFO - second rotation
+2025-03-17 08:17:58,968 - shuffle - INFO - update 25 --> None
+2025-03-17 08:17:59,130 - shuffle - INFO - update 18 --> None
+2025-03-17 08:17:59,275 - shuffle - INFO - update 1 --> None
+2025-03-17 08:17:59,411 - shuffle - INFO - update 13 --> None
+2025-03-17 08:17:59,639 - shuffle - INFO - update 15 --> 1
+2025-03-17 08:17:59,817 - shuffle - INFO - update 16 --> 1
+2025-03-17 08:17:59,977 - shuffle - INFO - update 14 --> 2
+2025-03-17 08:18:00,125 - shuffle - INFO - update 19 --> 2
+2025-03-17 08:18:00,302 - shuffle - INFO - update 23 --> 3
+2025-03-17 08:18:00,509 - shuffle - INFO - update 12 --> 3
+2025-03-17 08:18:00,663 - shuffle - INFO - update 20 --> 4
+2025-03-17 08:18:00,912 - shuffle - INFO - update 22 --> 4
+2025-03-17 08:18:01,082 - shuffle - INFO - update 33 --> 5
+2025-03-17 08:18:01,201 - shuffle - INFO - update 24 --> 5
+2025-03-17 08:19:48,022 - shuffle - INFO - Updated 25 and 15 --> None
+2025-03-17 08:19:48,284 - shuffle - INFO - Updated 1 and 14 --> None
+2025-03-17 08:19:48,559 - shuffle - INFO - Updated 18 and 12 --> 1
+2025-03-17 08:19:48,959 - shuffle - INFO - Updated 13 and 20 --> 2
+2025-03-17 08:19:49,667 - shuffle - INFO - Updated 16 and 24 --> 3
+2025-03-17 08:19:50,146 - shuffle - INFO - Updated 19 and 33 --> 4
+2025-03-17 08:19:50,623 - shuffle - INFO - Updated 23 and 22 --> 5
+2025-03-17 08:20:54,096 - shuffle - INFO - Updated 25 and 12 --> None
+2025-03-17 08:20:54,459 - shuffle - INFO - Updated 1 and 13 --> None
+2025-03-17 08:20:54,969 - shuffle - INFO - Updated 15 and 16 --> 1
+2025-03-17 08:20:55,353 - shuffle - INFO - Updated 14 and 19 --> 2
+2025-03-17 08:20:55,822 - shuffle - INFO - Updated 18 and 22 --> 3
+2025-03-17 08:20:56,309 - shuffle - INFO - Updated 20 and 23 --> 4
+2025-03-17 08:20:56,849 - shuffle - INFO - Updated 24 and 33 --> 5
+2025-03-17 08:21:11,831 - shuffle - ERROR - Error in shuffle: pr() takes 1 positional argument but 2 were given
+2025-03-17 08:21:28,958 - shuffle - INFO - Updated 25 and 15 --> None
+2025-03-17 08:21:29,239 - shuffle - INFO - Updated 1 and 14 --> None
+2025-03-17 08:21:29,559 - shuffle - INFO - Updated 13 and 18 --> 1
+2025-03-17 08:21:30,056 - shuffle - INFO - Updated 12 and 20 --> 2
+2025-03-17 08:21:30,645 - shuffle - INFO - Updated 16 and 24 --> 3
+2025-03-17 08:21:31,280 - shuffle - INFO - Updated 19 and 33 --> 4
+2025-03-17 08:21:31,977 - shuffle - INFO - Updated 22 and 23 --> 5
+2025-03-17 08:21:38,239 - shuffle - INFO - Updated 25 and 13 --> None
+2025-03-17 08:21:38,887 - shuffle - INFO - Updated 1 and 12 --> None
+2025-03-17 08:21:39,249 - shuffle - INFO - Updated 15 and 16 --> 1
+2025-03-17 08:21:39,715 - shuffle - INFO - Updated 14 and 19 --> 2
+2025-03-17 08:21:39,988 - shuffle - INFO - Updated 18 and 22 --> 3
+2025-03-17 08:21:40,583 - shuffle - INFO - Updated 20 and 23 --> 4
+2025-03-17 08:21:41,134 - shuffle - INFO - Updated 24 and 33 --> 5
+2025-03-17 08:25:48,891 - shuffle - INFO - Updated 13 and 16 --> None
+2025-03-17 08:25:49,372 - shuffle - INFO - Updated 12 and 19 --> None
+2025-03-17 08:25:49,962 - shuffle - INFO - Updated 25 and 22 --> 1
+2025-03-17 08:25:50,380 - shuffle - INFO - Updated 1 and 23 --> 2
+2025-03-17 08:25:50,883 - shuffle - INFO - Updated 15 and 33 --> 3
+2025-03-17 08:25:51,325 - shuffle - INFO - Updated 14 and 24 --> 4
+2025-03-17 08:25:51,637 - shuffle - INFO - Updated 18 and 20 --> 5
+2025-03-17 08:27:32,980 - shuffle - INFO - Updated 16 and 25 --> None
+2025-03-17 08:27:33,237 - shuffle - INFO - Updated 13 and 23 --> None
+2025-03-17 08:27:33,528 - shuffle - INFO - Updated 19 and 33 --> 1
+2025-03-17 08:27:33,828 - shuffle - INFO - Updated 12 and 24 --> 2
+2025-03-17 08:27:34,096 - shuffle - INFO - Updated 22 and 20 --> 3
+2025-03-17 08:27:34,382 - shuffle - INFO - Updated 1 and 18 --> 4
+2025-03-17 08:27:34,650 - shuffle - INFO - Updated 15 and 14 --> 5
+2025-03-17 08:30:07,095 - shuffle - INFO - Updated 23 and 33 --> None
+2025-03-17 08:30:07,424 - shuffle - INFO - Updated 16 and 24 --> None
+2025-03-17 08:30:07,731 - shuffle - INFO - Updated 25 and 22 --> 1
+2025-03-17 08:30:08,023 - shuffle - INFO - Updated 13 and 18 --> 2
+2025-03-17 08:30:08,321 - shuffle - INFO - Updated 19 and 15 --> 3
+2025-03-17 08:30:08,591 - shuffle - INFO - Updated 12 and 14 --> 4
+2025-03-17 08:30:08,894 - shuffle - INFO - Updated 20 and 1 --> 5
+2025-03-17 08:30:55,905 - shuffle - INFO - Updated 24 and 25 --> None
+2025-03-17 08:30:58,639 - shuffle - INFO - Updated 23 and 18 --> None
+2025-03-17 08:30:59,595 - shuffle - INFO - Updated 33 and 19 --> 1
+2025-03-17 08:31:00,371 - shuffle - INFO - Updated 16 and 14 --> 2
+2025-03-17 08:31:01,808 - shuffle - INFO - Updated 22 and 20 --> 3
+2025-03-17 08:31:02,452 - shuffle - INFO - Updated 13 and 1 --> 4
+2025-03-17 08:31:03,509 - shuffle - INFO - Updated 15 and 12 --> 5
+2025-03-17 08:31:31,171 - shuffle - INFO - Updated 20 and 33 --> None
+2025-03-17 08:31:32,734 - shuffle - INFO - Updated 23 and 16 --> None
+2025-03-17 08:31:34,185 - shuffle - INFO - Updated 25 and 22 --> 1
+2025-03-17 08:31:35,173 - shuffle - INFO - Updated 18 and 13 --> 2
+2025-03-17 08:31:35,831 - shuffle - INFO - Updated 19 and 15 --> 3
+2025-03-17 08:31:36,210 - shuffle - INFO - Updated 14 and 12 --> 4
+2025-03-17 08:31:37,654 - shuffle - INFO - Updated 20 and 1 --> 5
+2025-03-17 08:33:38,741 - shuffle - ERROR - Error in shuffle: 'list' object has no attribute 'clone'
+2025-03-17 08:33:52,971 - shuffle - ERROR - Error in shuffle: unsupported operand type(s) for +: 'int' and 'list'
+2025-03-17 08:34:34,512 - shuffle - INFO - Updated 24 and 33 --> None
+2025-03-17 08:34:34,997 - shuffle - INFO - Updated 16 and 23 --> None
+2025-03-17 08:34:35,577 - shuffle - INFO - Updated 22 and 25 --> 1
+2025-03-17 08:34:36,159 - shuffle - INFO - Updated 13 and 18 --> 2
+2025-03-17 08:34:36,748 - shuffle - INFO - Updated 15 and 19 --> 3
+2025-03-17 08:34:37,025 - shuffle - INFO - Updated 12 and 14 --> 4
+2025-03-17 08:34:37,482 - shuffle - INFO - Updated 1 and 20 --> 5
+2025-03-17 08:34:53,228 - shuffle - INFO - Updated 24 and 33 --> None
+2025-03-17 08:34:53,920 - shuffle - INFO - Updated 16 and 23 --> None
+2025-03-17 08:34:54,315 - shuffle - INFO - Updated 22 and 25 --> 1
+2025-03-17 08:34:54,594 - shuffle - INFO - Updated 13 and 18 --> 2
+2025-03-17 08:34:54,913 - shuffle - INFO - Updated 15 and 19 --> 3
+2025-03-17 08:34:55,277 - shuffle - INFO - Updated 12 and 14 --> 4
+2025-03-17 08:34:55,810 - shuffle - INFO - Updated 1 and 20 --> 5
+2025-03-17 08:35:22,867 - shuffle - INFO - Updated 24 and 33 --> None
+2025-03-17 08:35:23,137 - shuffle - INFO - Updated 16 and 23 --> None
+2025-03-17 08:35:23,405 - shuffle - INFO - Updated 22 and 25 --> 1
+2025-03-17 08:35:23,650 - shuffle - INFO - Updated 13 and 18 --> 2
+2025-03-17 08:35:24,036 - shuffle - INFO - Updated 15 and 19 --> 3
+2025-03-17 08:35:24,286 - shuffle - INFO - Updated 12 and 14 --> 4
+2025-03-17 08:35:24,553 - shuffle - INFO - Updated 1 and 20 --> 5
+2025-03-17 08:36:06,661 - shuffle - INFO - Updated 23 and 25 --> None
+2025-03-17 08:36:07,459 - shuffle - INFO - Updated 33 and 18 --> None
+2025-03-17 08:36:08,397 - shuffle - INFO - Updated 24 and 19 --> 1
+2025-03-17 08:36:08,979 - shuffle - INFO - Updated 16 and 14 --> 2
+2025-03-17 08:36:09,417 - shuffle - INFO - Updated 22 and 20 --> 3
+2025-03-17 08:36:10,049 - shuffle - INFO - Updated 13 and 1 --> 4
+2025-03-17 08:36:10,641 - shuffle - INFO - Updated 15 and 12 --> 5
+2025-03-17 08:37:26,308 - shuffle - INFO - Updated 25 and 24 --> None
+2025-03-17 08:37:26,611 - shuffle - INFO - Updated 23 and 16 --> None
+2025-03-17 08:37:26,968 - shuffle - INFO - Updated 25 and 22 --> 1
+2025-03-17 08:37:27,377 - shuffle - INFO - Updated 33 and 13 --> 2
+2025-03-17 08:37:27,673 - shuffle - INFO - Updated 25 and 15 --> 3
+2025-03-17 08:37:28,183 - shuffle - INFO - Updated 18 and 12 --> 4
+2025-03-17 08:37:28,869 - shuffle - INFO - Updated 19 and 20 --> 5
+2025-03-17 08:37:50,710 - shuffle - INFO - Updated 23 and 33 --> None
+2025-03-17 08:37:51,311 - shuffle - INFO - Updated 16 and 13 --> None
+2025-03-17 08:37:51,745 - shuffle - INFO - Updated 23 and 15 --> 1
+2025-03-17 08:37:52,640 - shuffle - INFO - Updated 24 and 12 --> 2
+2025-03-17 08:37:53,072 - shuffle - INFO - Updated 23 and 20 --> 3
+2025-03-17 08:37:53,449 - shuffle - INFO - Updated 22 and 19 --> 4
+2025-03-17 08:37:54,279 - shuffle - INFO - Updated 14 and 18 --> 5
+2025-03-17 08:41:25,152 - shuffle - INFO - Updated 25 and 24 --> None
+2025-03-17 08:41:54,685 - shuffle - INFO - Updated 25 and 13 --> None
+2025-03-17 08:41:55,267 - shuffle - INFO - Updated 24 and 22 --> None
+2025-03-17 08:41:55,958 - shuffle - INFO - Updated 33 and 19 --> 1
+2025-03-17 08:41:56,554 - shuffle - INFO - Updated 16 and 12 --> 2
+2025-03-17 08:41:56,922 - shuffle - INFO - Updated 23 and 15 --> 3
+2025-03-17 08:44:30,455 - shuffle - INFO - Updated 24 and 33 --> None
+2025-03-17 08:44:31,148 - shuffle - INFO - Updated 22 and 20 --> None
+2025-03-17 08:44:31,459 - shuffle - INFO - Updated 25 and 12 --> 1
+2025-03-17 08:44:31,769 - shuffle - INFO - Updated 13 and 18 --> 2
+2025-03-17 08:44:32,038 - shuffle - INFO - Updated 19 and 1 --> 3
+2025-03-17 08:44:32,335 - shuffle - INFO - Updated 16 and 14 --> 4
+2025-03-17 08:44:32,610 - shuffle - INFO - Updated 23 and 15 --> 5
+2025-03-17 08:44:57,189 - shuffle - INFO - Updated 24 and 25 --> None
+2025-03-17 08:44:57,733 - shuffle - INFO - Updated 22 and 18 --> None
+2025-03-17 08:44:58,027 - shuffle - INFO - Updated 33 and 19 --> 1
+2025-03-17 08:44:58,345 - shuffle - INFO - Updated 20 and 16 --> 2
+2025-03-17 08:44:58,839 - shuffle - INFO - Updated 12 and 23 --> 3
+2025-03-17 08:44:59,223 - shuffle - INFO - Updated 13 and 15 --> 4
+2025-03-17 08:44:59,919 - shuffle - INFO - Updated 1 and 14 --> 5
+2025-03-17 08:45:21,953 - shuffle - INFO - Updated 24 and 33 --> None
+2025-03-17 08:45:22,213 - shuffle - INFO - Updated 22 and 20 --> None
+2025-03-17 08:45:22,874 - shuffle - INFO - Updated 25 and 23 --> 1
+2025-03-17 08:45:23,171 - shuffle - INFO - Updated 18 and 15 --> 2
+2025-03-17 08:45:23,495 - shuffle - INFO - Updated 19 and 14 --> 3
+2025-03-17 08:45:23,873 - shuffle - INFO - Updated 16 and 1 --> 4
+2025-03-17 08:45:24,295 - shuffle - INFO - Updated 12 and 13 --> 5
+2025-03-17 08:48:16,770 - shuffle - INFO - Updated 15 and 18 --> None
+2025-03-17 08:48:17,145 - shuffle - INFO - Updated 14 and 20 --> None
+2025-03-17 08:48:17,421 - shuffle - INFO - Updated 33 and 22 --> 1
+2025-03-17 08:48:17,795 - shuffle - INFO - Updated 1 and 24 --> 2
+2025-03-17 08:48:18,272 - shuffle - INFO - Updated 13 and 25 --> 3
+2025-03-17 08:48:18,521 - shuffle - INFO - Updated 12 and 23 --> 4
+2025-03-17 08:48:18,903 - shuffle - INFO - Updated 16 and 19 --> 5

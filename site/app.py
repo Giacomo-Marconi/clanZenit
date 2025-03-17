@@ -11,7 +11,6 @@ log = logger.Log('app', 'logFile.log').get_logger()
 app = Flask(__name__)
 
 CORS(app, resources={r"/*": {
-    
     "methods": ["GET", "POST", "OPTIONS"],
     "allow_headers": ["Content-Type", "Authorization"]
 }})
