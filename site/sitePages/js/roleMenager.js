@@ -2,6 +2,7 @@ let role;
 const url = "http://127.0.0.1"
 const port = ":5000"
 const token = localStorage.getItem('token');
+
 function init()  {
     const add = document.getElementById('people');
     add.innerHTML = "";
@@ -9,13 +10,14 @@ function init()  {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': token
+            'Authorization': "Barer " + token
         }
     })
         .then(response => {
-            if(response.status == 401){
+            if(response.status == 403){
+                window.location.href = url + port + '/login';
+                localStorage.setItem('last', "role");
                 alert("non loggato");
-                window.location.href = url + '/login';
                 return;
             }
             if (!response.ok) {
@@ -48,16 +50,17 @@ function remove(id) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': token
+            'Authorization': "Barer " + token
         },
         body: JSON.stringify({
             roleId: id
         })
     })
         .then(response => {
-            if(response.status == 401){
+            if(response.status == 403){
                 alert("non loggato");
-                window.location.href = url + '/login';
+                window.location.href = url + port + '/login';
+                localStorage.setItem('last', "role");
                 return;
             }
             if(response.status == 402){
@@ -124,16 +127,17 @@ function newRole(params) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': token
+            'Authorization': "Barer " + token
         },
         body: JSON.stringify({
             roleName: roleName
         })
     })
         .then(response => {
-            if(response.status == 401){
+            if(response.status == 403){
                 alert("non loggato");
-                window.location.href = url + '/login';
+                window.location.href = url + port + '/login';
+                localStorage.setItem('last', "role");
                 return;
             }
             if (!response.ok) {
@@ -151,13 +155,14 @@ function shuffle() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': token
+                'Authorization': "Barer " + token
             }
         })
             .then(response => {
-                if(response.status == 401){
+                if(response.status == 403){
                     alert("non loggato");
-                    window.location.href = url + '/login';
+                    window.location.href = url + port + '/login';
+                    localStorage.setItem('last', "role");
                     return;
                 }
                 if (!response.ok) {

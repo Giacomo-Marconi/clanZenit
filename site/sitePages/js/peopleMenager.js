@@ -10,16 +10,21 @@ function init()  {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': token
+            'Authorization': "Barer " + token
         }})
         .then(response => {
-            if(response.status == 401){
-                alert("non loggato");
-                window.location.href = url + '/login';
+            if(response.status == 403){
+                window.location.href = url + port + '/login';
+                localStorage.setItem('last', "person");
+                alert("non loggato1");
                 return;
             }
+            if(response.status == 401){
+                window.location.href = url + '/';
+                alert("Accesso solo agli admin");
+            }
             if (!response.ok) {
-                throw new Error('error getgetPerson');
+                throw new Error('error getPerson');
             }
             return response.json();
         })
@@ -40,17 +45,22 @@ function remove(id) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': token
+            'Authorization': "Barer " + token
         },
         body: JSON.stringify({
             id: id
         })
     })
         .then(response => {
-            if(response.status == 401){
-                alert("non loggato");
-                window.location.href = url + '/login';
+            if(response.status == 403){
+                window.location.href = url + port + '/login';
+                localStorage.setItem('last', "person");
+                alert("non loggato2");
                 return;
+            }
+            if(response.status == 401){
+                window.location.href = url + '/';
+                alert("Accesso solo agli admin");
             }
             if (!response.ok) {
                 console.log('error removePerson');
@@ -77,14 +87,19 @@ async function getRoles() {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': token
+            'Authorization': "Barer " + token
         }
     })
     .then(response => {
-        if(response.status == 401){
-            alert("non loggato");
-            window.location.href = url + '/login';
+        if(response.status == 403){
+            window.location.href = url + port + '/login';
+            localStorage.setItem('last', "person");
+            alert("non loggato3");
             return;
+        }
+        if(response.status == 401){
+            window.location.href = url + '/';
+            alert("Accesso solo agli admin");
         }
         if (!response.ok) {
             console.log('error getRole');
@@ -129,7 +144,7 @@ async function getRoles() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': token
+                'Authorization': "Barer " + token
             },
             body: JSON.stringify({
                 personId: personId,
@@ -137,10 +152,15 @@ async function getRoles() {
             })
         })
             .then(response => {
-                if(response.status == 401){
-                    alert("non loggato");
-                    window.location.href = url + '/login';
+                if(response.status == 403){
+                    window.location.href = url + port + '/login';
+                    localStorage.setItem('last', "person");
+                    alert("non loggato4");
                     return;
+                }
+                if(response.status == 401){
+                    window.location.href = url + '/';
+                    alert("Accesso solo agli admin");
                 }
                 if (!response.ok) {
                     throw new Error('error setRole');
@@ -191,17 +211,22 @@ function newPerson() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': token
+            'Authorization': "Barer " + token
         },
         body: JSON.stringify({
             name: name
         })
     })
         .then(response => {
-            if(response.status == 401){
-                alert("non loggato");
-                window.location.href = url + '/login';
+            if(response.status == 403){
+                window.location.href = url + port + '/login';
+                localStorage.setItem('last', "person");
+                alert("non loggato5");
                 return;
+            }
+            if(response.status == 401){
+                window.location.href = url + '/';
+                alert("Accesso solo agli admin");
             }
             if (!response.ok) {
                 console.log('error addPerson');
@@ -220,14 +245,19 @@ function shuffle() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': token
+                'Authorization': "Barer " + token
             }
         })
             .then(response => {
-                if(response.status == 401){
-                    alert("non loggato");
-                    window.location.href = url + '/login';
+                if(response.status == 403){
+                    window.location.href = url + port + '/login';
+                    localStorage.setItem('last', "person");
+                    alert("non loggato6");
                     return;
+                }
+                if(response.status == 401){
+                    window.location.href = url + '/';
+                    alert("Accesso solo agli admin");
                 }
                 if (!response.ok) {
                     alert("error shuffle");
